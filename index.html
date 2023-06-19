@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ECEP Dashboard</title>
+    <link rel="stylesheet" href="styles/mainstyle.css" />
+    <link rel="stylesheet" href="styles/map.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+  </head>
+  <body>
+    <h1>Select a region</h1>
+    <div id="map"></div>
+
+    <!-- leaflet js link-->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- loading config -->
+    <script src="./scripts/leaflet/config.js" type="text/javascript"></script>
+    <!-- Load geoJSON data into var data-->
+    <script src="./data/wisconsin-districts.js"></script>
+    <!-- Colors -->
+    <script src="./scripts/leaflet/color.js" type="text/javascript"></script>
+    <!-- creating map -->
+    <script src="./scripts/leaflet/map.js" type="text/javascript"></script>
+    <!-- displaying tilelayer -->
+    <script
+      src="./scripts/leaflet/tileLayer.js"
+      type="text/javascript"
+    ></script>
+    <!-- overriding Zoom -->
+    <script
+      src="./scripts/leaflet/zoomControl.js"
+      type="text/javascript"
+    ></script>
+    <!-- Wisconsin -->
+    <script
+      src="./scripts/leaflet/wisconsin.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>
