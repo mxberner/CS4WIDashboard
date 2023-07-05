@@ -10,7 +10,7 @@ var searchControl = new L.Control.Search({
   },
 });
 
-map.addControl(searchControl); //inizialize search control
+if (show_searchBar == true) map.addControl(searchControl); //inizialize search control
 
 function onSearch(layer) {
   var acton = layer;

@@ -15,7 +15,8 @@ var southWestBound = L.latLng(41.5, -97), //(y, x) southeast bound
   mapbounds = L.latLngBounds(southWestBound, northEastBound);
 
 //choropleth visualization
-var thresholds = [0, 25, 50, 75, 100, 125, 150, 175, 200, 225];
+var thresholds = [0, 25, 50, 75, 100, 125, 150, 175, 200, 225]; //designed for size = 10
+var less_levels = false; //skips over "odd" gradient/threshold values to double color difference, designed for 5 thresholds
 var use_gradient = 1; //0: no_gradient, 1: blue_gradient, 2: red_gradient
 blue_gradient = [
   "#FFFEDF",
@@ -42,4 +43,3 @@ red_gradient = [
   "#050005",
 ];
 no_gradient = ["#FAF8E2"];
-var less_levels = true; //skips over "odd" gradient values to double color difference

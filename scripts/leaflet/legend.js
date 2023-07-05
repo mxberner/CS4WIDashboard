@@ -6,12 +6,22 @@ legend.onAdd = function (map) {
     labels = [];
 
   for (var i = 0; i < grades.length; i++) {
-    div.innerHTML +=
-      '<i style="background:' +
-      getColor(grades[i] + 1) +
-      '"></i> ' +
-      grades[i] +
-      (grades[i + 1] ? "&ndash;" + grades[i + 1] + "<br>" : "+");
+    if (!less_levels) {
+      div.innerHTML +=
+        '<i style="background:' +
+        getColor(grades[i] + 1) +
+        '"></i> ' +
+        grades[i] +
+        (grades[i + 1] ? "&ndash;" + (grades[i + 1] - 1) + "<br>" : "+");
+    } else {
+      div.innerHTML +=
+        '<i style="background:' +
+        getColor(grades[i] + 1) +
+        '"></i> ' +
+        grades[i] +
+        (grades[i + 2] ? "&ndash;" + (grades[i + 2] - 1) + "<br>" : "+");
+      i++;
+    }
   }
   return div;
 };

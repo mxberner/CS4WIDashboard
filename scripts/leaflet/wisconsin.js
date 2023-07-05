@@ -49,7 +49,7 @@ function OnClick(e) {
 }
 
 function onDouble(layer) {
-  map.fitBounds(layer.getBounds());
+  if (override_doubleclick) map.fitBounds(layer.getBounds());
 }
 
 function isSelected(layer) {

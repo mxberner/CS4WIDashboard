@@ -39,5 +39,23 @@ function choropleth(feature) {
 
 //Function to determine color based on intensity thresholds
 function getColor(d) {
+  for (var i = 1; i <= thresholds.length; i++) {
+    if (less_levels) i++;
+    if (d >= thresholds[thresholds.length - i]) {
+      if (use_gradient == 1) {
+        if (thresholds.length - i >= blue_gradient.length) {
+          return blue_gradient[blue_gradient.length - 1];
+        }
+        return blue_gradient[thresholds.length - i];
+      } else if (use_gradient == 2) {
+        if (thresholds.length - i >= red_gradient.length) {
+          return red_gradient[red.length - 1];
+        }
+        return red_gradient[thresholds.length - i];
+      } else {
+        return no_gradient[0];
+      }
+    }
+  }
   return no_gradient[0];
 }

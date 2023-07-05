@@ -12,6 +12,10 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     />
+    <link
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1>Select a region</h1>
@@ -32,14 +36,26 @@
       src="./scripts/leaflet/tileLayer.js"
       type="text/javascript"
     ></script>
-    <!-- overriding Zoom -->
-    <script
-      src="./scripts/leaflet/zoomControl.js"
-      type="text/javascript"
-    ></script>
     <!-- Wisconsin -->
     <script
       src="./scripts/leaflet/wisconsin.js"
+      type="text/javascript"
+    ></script>
+    <!-- legend -->
+    <script src="./scripts/leaflet/legend.js" type="text/javascript"></script>
+    <!-- search control for leaflet-->
+    <link
+      rel="stylesheet"
+      href="./scripts/leaflet/search-master/src/leaflet-search.css"
+    />
+    <script src="./scripts/leaflet/search-master/src/leaflet-search.js"></script>
+    <script
+      src="./scripts/leaflet/search-master/search.js"
+      type="text/javascript"
+    ></script>
+    <!-- overriding Zoom -->
+    <script
+      src="./scripts/leaflet/zoomControl.js"
       type="text/javascript"
     ></script>
   </body>
