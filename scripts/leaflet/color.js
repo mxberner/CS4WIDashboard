@@ -28,13 +28,18 @@ var layer_styles = {
 //Style used to varie in intensity over some variable
 function choropleth(feature) {
   return {
-    fillColor: getColor(feature.properties.OBJECTID),
+    fillColor: getColorDriver(feature.properties),
     weight: 2.5,
     opacity: 1,
     color: "#c2c2c2",
     dashArray: "2",
     fillOpacity: 0.75,
   };
+}
+
+function getColorDriver(fp) {
+  d = fp[color_variable];
+  return getColor(d);
 }
 
 //Function to determine color based on intensity thresholds

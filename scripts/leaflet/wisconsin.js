@@ -89,9 +89,16 @@ info.onAdd = function (map) {
 
 //Panel that displays county name when hovered.
 info.update = function (props) {
-  this._div.innerHTML = props
-    ? "<b>" + props.DISTRICT + "</b>"
-    : "<b>" + "Hover over a district" + "</b>";
+  this._div.innerHTML = "<b>" + legend_text + "</b>";
+  if (props) {
+    this._div.innerHTML = "<b></b>";
+    for (const [index, item] of legend_displayProperties.entries()) {
+      if (props.hasOwnProperty(item)) {
+        this._div.innerHTML += "<b>" + legend_displayLabels[index] + "</b>";
+        this._div.innerHTML += "<b>" + props[item] + "</b>" + "</br>";
+      }
+    }
+  }
 };
 info.addTo(map);
 

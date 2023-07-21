@@ -1,6 +1,10 @@
 //element settings
 var use_partition = 1; //1: By-District, 2: By-County
 var show_Legend = true;
+var legend_text = "Hover over a district";
+var legend_displayLabels = [""];
+var legend_displayProperties = ["DISTRICT"];
+var use_data = "District"; //District or County data.
 var show_customZoom = true;
 var show_searchBar = true;
 var use_tile = 1; //1: Carto, 2: OpenStreetMap
@@ -16,8 +20,9 @@ var southWestBound = L.latLng(41.5, -97), //(y, x) southeast bound
 
 //choropleth visualization
 var thresholds = [0, 25, 50, 75, 100, 125, 150, 175, 200, 225]; //designed for size = 10
-var less_levels = false; //skips over "odd" gradient/threshold values to double color difference, designed for 5 thresholds
-var use_gradient = 1; //0: no_gradient, 1: blue_gradient, 2: red_gradient
+var less_levels = true; //skips over "odd" gradient/threshold values to double color difference, designed for 5 thresholds
+var use_gradient = 2; //0: no_gradient, 1: blue_gradient, 2: red_gradient
+var color_variable = "OBJECTID";
 blue_gradient = [
   "#FFFEDF",
   "#D7F3C1",
