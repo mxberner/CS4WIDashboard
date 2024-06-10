@@ -7,6 +7,7 @@ var legend_displayProperties = ["DISTRICT", "OBJECTID"];
 var use_data = "District"; //District or County data.
 var show_customZoom = true;
 var show_searchBar = true;
+var search_propertyvar = "DISTRICT";
 var use_tile = 1; //1: Carto, 2: OpenStreetMap
 var override_doubleclick = true;
 

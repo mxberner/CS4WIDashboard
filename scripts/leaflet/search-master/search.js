@@ -1,5 +1,5 @@
 var searchControl = new L.Control.Search({
-  propertyName: "DISTRICT",
+  propertyName: search_propertyvar,
   layer: wisLayer,
   marker: false,
   collapsed: false,
