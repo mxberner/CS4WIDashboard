@@ -2,8 +2,8 @@
 var use_partition = 1; //1: By-District, 2: By-County
 var show_Legend = true;
 var legend_text = "Hover over a district";
-var legend_displayLabels = [""];
-var legend_displayProperties = ["DISTRICT"];
+var legend_displayLabels = ["", "ID:"];
+var legend_displayProperties = ["DISTRICT", "OBJECTID"];
 var use_data = "District"; //District or County data.
 var show_customZoom = true;
 var show_searchBar = true;
